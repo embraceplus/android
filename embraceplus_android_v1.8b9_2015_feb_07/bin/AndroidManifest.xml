@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.embraceplus.app"
+    android:versionCode="9"
+    android:versionName="1.8" >
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <permission
+        android:name="android.permission.ACCESS_NOTIFICATIONS"
+        android:protectionLevel="system|signature" />
+    <permission
+        android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:name="com.embraceplus.utils.ContextUtil"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:theme="@style/AppBaseTheme" >
+        <activity
+            android:name=".SearchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+
+            <!-- android:launchMode="singleTask" -->
+            <!--  -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"  >
+        </activity>
+        <!--
+        <activity
+            android:name="com.embraceplus.test.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.embraceplus.test.SearchActivity"
+            android:label="@string/app_name" >
+        </activity>
+        -->
+        <activity android:name="com.embraceplus.test.DemoActivity" >
+        </activity>
+
+        <service
+            android:name="com.embraceplus.ble.BluetoothLeService"
+            android:enabled="true" >
+            <intent-filter android:priority="10000" >
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.embraceplus.services.PhoneStatReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <!-- <action android:name="android.intent.action.NEW_OUTGOING_CALL" /> -->
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.embraceplus.services.SMSReceiver" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.embraceplus.services.NLService"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.embraceplus.utils.BluetoothServiceWatcherReceiver" >
+            <intent-filter android:name="android.intent.action.ACTION_TIME_TICK" >
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.embraceplus.utils.AlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.embraceplus.app.MainActivity" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.embraceplus.utils.GrandFatherHalfHourReceiver" >
+            <intent-filter>
+                <action android:name="com.embraceplus.app.MainActivity" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.embraceplus.utils.GrandFatherHourlyReceiver" >
+            <intent-filter>
+                <action android:name="com.embraceplus.app.MainActivity" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

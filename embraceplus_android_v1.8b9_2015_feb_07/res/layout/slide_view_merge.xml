@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- android:layout_height="fill_parent" -->
+
+    <LinearLayout
+        android:id="@+id/view_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" />
+    <!-- android:layout_height="fill_parent" -->
+
+    <RelativeLayout
+        android:id="@+id/holder"
+        android:layout_width="180dip"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="0dp"
+        android:clickable="true" >
+
+        <!-- android:layout_height="fill_parent" -->
+
+        <TextView
+            android:id="@+id/silent"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#777777"
+            android:gravity="center"
+            android:text="Silent"
+            android:textColor="@android:color/white" />
+        <!--
+        android:layout_height="55dp"
+        android:layout_height="fill_parent"
+        -->
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/silent"
+            android:background="@android:color/holo_red_light"
+            android:gravity="center"
+            android:text="Delete" />
+        <!-- android:background="@android:color/holo_red_light" -->
+    </RelativeLayout>
+
+</merge>

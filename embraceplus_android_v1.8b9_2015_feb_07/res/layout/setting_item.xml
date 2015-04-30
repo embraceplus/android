@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:embraceplus="http://schemas.android.com/apk/res/com.embraceplus.app"
+    android:layout_width="fill_parent"
+    android:layout_height="58.0dip"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="0dp">
+
+    <!-- android:paddingRight="10.0dip" -->
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="50.0dip"
+        android:layout_height="50.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5.0dip"
+        android:src="@drawable/wechat_icon" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/icon"
+        android:textColor="@android:color/black"
+        android:textSize="15.0sp" />
+
+    <!--
+  <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:background="@drawable/selector_butn_toggle"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="19dp"
+        android:text=""
+        android:textOff=""
+        android:textOn=""
+         />    -->
+
+    <com.embraceplus.app.fragment.utils.MySwitch
+        android:id="@+id/toggleButton1"
+        android:layout_width="120dip"
+        android:layout_height="30dip"
+        android:layout_alignBaseline="@+id/start_textView"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/switch_select"
+        embraceplus:textSize="12px"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dip"
+        android:layout_alignParentEnd="false"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_toRightOf="@+id/icon"
+        android:background="#4cFFFFFF" />
+
+    <!-- android:layout_toRightOf="@+id/title" -->
+
+</RelativeLayout>

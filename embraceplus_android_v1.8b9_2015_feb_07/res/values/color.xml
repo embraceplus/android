@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <color name="text_white">#ffffffff</color>
+     <color name="switch_on">#ff4f5050</color>
+     <color name="switch_off">#ffb0afb0</color>
+</resources>

@@ -1,0 +1,50 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="40dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            style="@style/TextTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="Help"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:background="#4cFFFFFF" />
+    </FrameLayout>
+    
+    <ListView
+        android:id="@+id/helpItemsListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dip"
+        android:listSelector="@+android:color/transparent" >
+    </ListView>
+
+</LinearLayout>

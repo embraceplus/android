@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MySwitch">  
+        <attr name="textCheckedColor" format="color" />  
+        <attr name="textUnCheckedColor" format="color" />  
+        <attr name="textSize" format="dimension" />  
+        <attr name="checkedtext" format="string" /> 
+        <attr name="uncheckedtext" format="string" /> 
+    </declare-styleable>  
+</resources>

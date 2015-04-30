@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_marginLeft="6dp"
+    android:orientation="vertical" >
+
+    <!--
+         <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    -->
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="match_parent" >
+
+        <!--  -->
+
+        <ImageView
+            android:id="@+id/theme_icon_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/choose_style_pic_height"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:paddingLeft="0dp"
+            android:paddingRight="2dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/delbutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/delbutton" />
+        <!--
+             android:layout_width="15dp"
+            android:layout_height="15dp"
+        -->
+        <!--
+              android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        -->
+        <!--
+        <View  
+             android:id="@+id/theme_selected_image"
+             
+        android:layout_width="fill_parent"  
+        android:layout_height="2dip" 
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_alignLeft="@+id/theme_icon_image"
+        android:layout_alignRight="@+id/theme_icon_image"
+        android:layout_above="@+id/theme_icon_text"
+        android:layout_gravity="center" 
+        android:background="#FF909090" 
+        android:visibility="invisible"
+        />
+        -->
+        <!--
+         android:layout_above="@+id/theme_icon_image"
+         android:layout_marginBottom="52dp"
+         
+         android:layout_marginBottom
+         android:layout_below="@+id/viewGroup"
+        -->
+
+
+        <!--
+               <ImageView
+            android:id="@+id/theme_selected_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" 
+            android:src="@drawable/add_theme"
+            android:visibility="invisible"/>
+        -->
+
+        <TextView
+            android:id="@+id/theme_icon_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/theme_icon_image"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:text="asfdsdfsdf"
+            android:textColor="#f0ffffff" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="2dip"
+            android:layout_alignBottom="@+id/theme_icon_image"
+            android:layout_marginBottom="1dp"
+            android:layout_marginRight="2dp"
+            android:background="#e0ffffff"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

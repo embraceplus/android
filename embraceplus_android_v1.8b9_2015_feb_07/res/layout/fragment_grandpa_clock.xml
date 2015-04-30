@@ -1,0 +1,257 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:embraceplus="http://schemas.android.com/apk/res/com.embraceplus.app"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="40dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            style="@style/TextTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="Grandpa Clock"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:background="#4cFFFFFF" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/start_textView_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/start_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="28dp"
+                android:layout_weight="1"
+                android:text="Start"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <com.embraceplus.app.fragment.utils.MySwitch
+                android:id="@+id/hourSwitch"
+                android:layout_width="80dip"
+                android:layout_height="20dip"
+                android:layout_alignBaseline="@+id/start_textView"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="19dp"
+                android:background="@drawable/switch_select"
+                embraceplus:checkedtext="On"
+                embraceplus:textSize="12px"
+                embraceplus:uncheckedtext="Off" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/start_textView_layout"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dp"
+            android:background="#4cffffff" />
+
+        <LinearLayout
+            android:id="@+id/Count_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view" >
+
+            <TextView
+                android:id="@+id/Count_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="28dp"
+                android:layout_weight="1"
+                android:text="Count"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <com.embraceplus.app.fragment.utils.TimeSwitch
+                android:id="@+id/countSwitch"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/Count_textView"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="19dp"
+                android:background="@drawable/switch_select"
+                android:textSize="12dip"
+                embraceplus:checkedtext="Once"
+                embraceplus:uncheckedtext="Hour" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Vibration_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Count_layout"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/Vibration_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/Count_layout"
+                android:layout_marginLeft="28dp"
+                android:layout_weight="1"
+                android:text="Vibration"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <com.embraceplus.app.fragment.utils.MySwitch
+                android:id="@+id/VibrationSwitch"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/Vibration_textView"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="19dp"
+                android:background="@drawable/switch_select"
+                android:textSize="12dip"
+                embraceplus:checkedtext="On"
+                embraceplus:uncheckedtext="Off" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Half_Hour_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Vibration_layout"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/Half_Hour_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/Vibration_layout"
+                android:layout_marginLeft="28dp"
+                android:layout_weight="1"
+                android:text="Half hour"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <com.embraceplus.app.fragment.utils.MySwitch
+                android:id="@+id/Half_Hour_Switch"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/Vibration_textView"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="19dp"
+                android:background="@drawable/switch_select"
+                android:textSize="12dip"
+                embraceplus:checkedtext="On"
+                embraceplus:uncheckedtext="Off" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/two_view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/Half_Hour_layout"
+            android:layout_marginTop="15dp"
+            android:background="#4cffffff" />
+
+        <RelativeLayout
+            android:id="@+id/colorpage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/grandpa_viewpager_height"
+            android:layout_below="@+id/two_view"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical" >
+
+            <com.embraceplus.widget.PageSelectorView
+                android:id="@+id/colors"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 >
+
+                <include layout="@layout/fx_colors_page" />
+
+                <include layout="@layout/fx_colors_page" />
+            </com.embraceplus.widget.PageSelectorView>
+
+            <com.embraceplus.widget.PageSelectorPagerView
+                android:id="@+id/colors_pager"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true" 
+                />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/three_view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_above="@+id/emulator"
+            android:layout_marginBottom="@dimen/line_above_emulator_view"
+            android:layout_marginTop="10dp"
+            android:background="#4cffffff" />
+
+        <com.embraceplus.widget.EmulatorView
+            android:id="@+id/emulator"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-20dp"
+            android:background="@drawable/bracelet_view" />
+
+        <TextView
+            android:id="@+id/preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:text="Preview"
+            android:textColor="#FFF"
+            android:textSize="22sp" />
+
+        <!--  -->
+
+    </RelativeLayout>
+
+</LinearLayout>

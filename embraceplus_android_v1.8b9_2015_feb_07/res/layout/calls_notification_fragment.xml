@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_style_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/titlebar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="40dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/TextTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="17dp"
+            android:src="@drawable/btn_options" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:background="#4cFFFFFF" />
+    </FrameLayout>
+
+    <com.embraceplus.utils.ListViewCompat
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:drawSelectorOnTop="false"
+        android:listSelector="@+android:color/transparent"
+        android:scrollbars="none" />
+
+</LinearLayout>

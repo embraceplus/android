@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:embraceplus="http://schemas.android.com/apk/res/com.embraceplus.app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="40dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/TextTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="17dp"
+            android:src="@drawable/btn_options" />
+
+        <TextView
+            android:id="@+id/done_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text_title"
+            android:layout_alignBottom="@+id/text_title"
+            android:layout_alignLeft="@+id/button_right"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="7dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:text="Done"
+            android:textColor="#ffffff" 
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:background="#4cFFFFFF" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_style_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="720dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:focusable="true"
+             />
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/viewpager"
+            android:layout_marginTop="5dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <!-- android:layout_height="20dp" -->
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/viewSeperator"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_above="@+id/emulator"
+            android:layout_marginBottom="@dimen/line_above_emulator_view"
+            android:background="#4cffffff" />
+
+        <!-- android:layout_below="@+id/viewGroup" -->
+        <!-- android:layout_marginTop="5dp" -->
+
+        <com.embraceplus.widget.EmulatorView
+            android:id="@+id/emulator"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-20dp"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/bracelet_view" />
+
+        <TextView
+            android:id="@+id/select_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="12dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:paddingTop="40dp"
+            android:text="Preview"
+            android:textColor="#FFF"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Embrace+</string>
+    <string name="action_connection">Connection</string>
+    <string name="hello_world">Hello Embrace+!</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="ble_supported">BLE supported</string>
+    <string name="ble_not_supported">BLE not supported</string>
+    <!-- chooseStyleViewFragment  String -->
+    <string name="business_text">Business</string>
+    <string name="fashionista_text">Fashionista</string>
+    <string name="vampire_text">Vampire</string>
+    <string name="clubber_text">Clubber</string>
+    <string name="student_text">Student</string>
+    <string name="magician_text">Magician</string>
+    <string name="adventuer_text">Adventuer</string>
+    <string name="athlete_text">Athlete</string>
+    <string name="entertainer_text">Entertainer</string>
+    <string name="edit_btn">Edit</string>
+    <string name="add_btn">Add</string>
+    <string name="cancel_btn">Cancel</string>
+
+    <!-- AddStyleFragment String -->
+    <string name="name_text">Name</string>
+    <string name="theme_text">Theme icon</string>
+    <string name="camera_text">Camera</string>
+    <string name="photos_text">Photos</string>
+    <string name="background_text">Background</string>
+    <string name="bg_camera_text">Camera</string>
+    <string name="bg_photos_text">Photos</string>
+    <string name="chronometer_initial_format">%s</string>
+
+    <!-- below string are for testing only. -->
+    <string name="app_name_caps">BLE</string>
+    <string name="login_button_text">LOG IN with my current Embrace+</string>
+    <string name="laddtheme_text">add theme</string>
+    <string name="setup_button_text">SET UP my new Vigo</string>
+    <string name="want_button_text">I don\'t have a Vigo (but I want one)</string>
+    <string name="search_textview_text">Scanning for device...</string>
+    <string name="search_instruction_textview_text">Press and hold the &quot;ON&quot; button</string>
+    <string name="next_button_text">Next</string>
+    <string name="username_hint">username</string>
+    <string name="password_hint">password</string>
+    <string name="signup_sub_text">Don\&apos;t have an account yet?  Sign up.</string>
+    <string name="forgot_sub_text">Forgot your password?  Click here.</string>
+    <string name="log_in_text">Log In</string>
+    <string name="title_activity_vigo_main">MainActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

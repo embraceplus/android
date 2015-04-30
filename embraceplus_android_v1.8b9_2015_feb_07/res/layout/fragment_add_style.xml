@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:embraceplus="http://schemas.android.com/apk/res/com.embraceplus.app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="40dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/TextTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="Add style"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="17dp"
+            android:visibility="gone"
+            android:src="@drawable/btn_options" />
+
+        <TextView
+            android:id="@+id/done_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text_title"
+            android:layout_alignBottom="@+id/text_title"
+            android:layout_alignLeft="@+id/button_right"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="7dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:text="Done"
+            android:textColor="#ffffff"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:background="#4cFFFFFF" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="33dp"
+            android:text="@string/name_text"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/name_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/name_text"
+            android:layout_alignBottom="@+id/name_text"
+            android:layout_alignRight="@+id/background_image"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/name_text"
+            android:background="@drawable/bg_border"
+            android:ems="10"
+            android:imeOptions="actionDone"
+            android:inputType="textCapWords"
+            android:paddingLeft="10dp"
+            android:paddingRight="0dp"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/theme_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/name_text"
+            android:layout_below="@+id/name_text"
+            android:layout_marginTop="43dp"
+            android:text="@string/theme_text"
+            android:textColor="#ffffff" />
+
+        <RelativeLayout
+            android:id="@+id/photo_relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/camera"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/theme_text" >
+
+            <ImageView
+                android:id="@+id/ptoto_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/background" />
+
+            <TextView
+                android:id="@+id/photo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ptoto_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:text="@string/photos_text"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <!-- 
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="193dp"
+            android:layout_height="413dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/camera"
+            android:layout_marginRight="23dp"
+            android:src="@drawable/add_style" /> 
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="150dp"
+            android:layout_height="300dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/camera"
+            android:layout_marginRight="23dp"
+            android:src="@drawable/add_style" />-->
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/camera"
+            android:layout_marginRight="23dp"
+            android:src="@drawable/add_style" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/background_image"
+            android:layout_marginTop="16dp"
+            android:background="#4cffffff" />
+
+        <TextView
+            android:id="@+id/background_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/theme_text"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="30dp"
+            android:text="@string/background_text"
+            android:textColor="#ffffff" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/camera"
+            android:layout_alignTop="@id/background_text"
+            android:layout_below="@+id/view"
+            android:layout_toRightOf="@+id/background_text" >
+
+            <TextView
+                android:id="@+id/bg_camera_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bg_camera_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:text="@string/bg_camera_text"
+                android:textColor="#ffffff" />
+
+            <ImageView
+                android:id="@+id/bg_camera_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/camera" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/background_image"
+            android:layout_alignTop="@id/background_text"
+            android:layout_below="@+id/view"
+            android:layout_toRightOf="@+id/relativeLayout1" >
+
+            <TextView
+                android:id="@+id/bg_photo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bg_photo_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:text="@string/bg_photos_text"
+                android:textColor="#ffffff" />
+
+            <ImageView
+                android:id="@+id/bg_photo_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/background" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/theme_text"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@+id/theme_text" >
+
+            <ImageView
+                android:id="@+id/camera_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/camera" />
+
+            <TextView
+                android:id="@+id/camer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/camera_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="2dp"
+                android:text="@string/camera_text"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

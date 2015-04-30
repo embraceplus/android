@@ -1,0 +1,15 @@
+1 when send the phone battery at the start of the app, it will has error. done
+2 自定义theme做墙纸时，图片没有完整显示，有些放大。done
+3 没有读取embrace的电量（在某个时候注册监听对象，如 ble discovery后）读取数据有问题 done
+4 call和clock没有滑动静音的功能  
+5 notifications划出的silent高度不合适。done
+6 ring out of range没有实现  done
+7 不同系统的calendar的通知内容。
+8 自定义msg
+9 theme上的圆环不正确。 
+10 第一次没有链接embrace，然后进入notification frame，点击左上角的图标连接后，右上角的
+  setting图标消失。OK done
+ the silent, notifications ON/OFF in settings done
+ 
+ 
+ 如果preset efffect要设为有震动效果，则flag值设为-116

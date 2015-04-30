@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp" >
+
+    <LinearLayout
+        android:id="@+id/backLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/button_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="17dp"
+            android:paddingRight="0dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+        android:background="@android:color/holo_blue_bright"
+            android:src="@drawable/btdisconnect" />
+
+        <TextView
+            android:id="@+id/back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="20dp"
+            android:text=""
+        android:background="@android:color/holo_blue_bright"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_title"
+        style="@style/TextTitleBar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textSize="20sp" />
+
+        
+    <ImageView
+        android:id="@+id/button_right"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="7dp"
+        android:background="@android:color/holo_blue_bright"
+        android:src="@drawable/btn_setting" />
+
+    <TextView
+        android:id="@+id/done_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_title"
+        android:layout_alignBottom="@+id/text_title"
+        android:layout_alignLeft="@+id/button_right"
+        android:layout_centerVertical="true"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="7dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:text=""
+        android:background="@android:color/holo_blue_bright"
+        android:textColor="#ffffff" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="7dp"
+        
+        android:background="#4cFFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/nextLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/next_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="0dp"
+            android:text="Next"
+        android:background="@android:color/holo_blue_dark"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="17dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+        android:background="@android:color/holo_blue_dark"
+            android:src="@drawable/notification_cell_arrow" />
+    </LinearLayout>
+
+</FrameLayout>

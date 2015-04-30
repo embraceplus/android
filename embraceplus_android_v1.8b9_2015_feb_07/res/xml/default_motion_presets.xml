@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+    <!-- 
+ <record
+        name="Long Beat"
+        duration="1000"
+        pause="1000"
+        random="0"
+        reverse="0" />
+    <record
+        name="Short Beat"
+        duration="500"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Lightning"
+        duration="50"
+        pause="100"
+        random="0"
+        reverse="0" />
+    <record
+        name="Gallop"
+        duration="400"
+        pause="0"
+        random="0"
+        reverse="1" />
+    <record
+        name="Flicker"
+        duration="300"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Irredescent"
+        duration="200"
+        pause="0"
+        random="0"
+        reverse="1" />
+    <record
+        name="Oscillate"
+        duration="100"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Twinkle"
+        duration="500"
+        pause="0"
+        random="1"
+        reverse="0" />
+    <record
+        name="Sirens"
+        duration="300"
+        pause="0"
+        random="0"
+        reverse="1" />
+    <record
+        name="Pulse"
+        duration="400"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Trickle"
+        duration="200"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Bomb"
+        duration="100"
+        pause="200"
+        random="0"
+        reverse="1" />
+-->
+     <!-- <record
+        name="Long beat"
+        duration="1000"
+        pause="1000"
+        random="0"
+        reverse="0" />
+    <record
+        name="Short beat"
+        duration="500"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Lightning"
+        duration="50"
+        pause="100"
+        random="0"
+        reverse="0" />
+    <record
+        name="Gallop"
+        duration="400"
+        pause="0"
+        random="0"
+        reverse="1" />
+    <record
+        name="Flicker"
+        duration="300"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Irredescent"
+        duration="200"
+        pause="0"
+        random="0"
+        reverse="1" />
+    <record
+        name="Oscillate"
+        duration="100"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Twinkle"
+        duration="500"
+        pause="0"
+        random="1"
+        reverse="0" />
+    <record
+        name="Sirens"
+        duration="300"
+        pause="0"
+        random="0"
+        reverse="1" />
+    <record
+        name="Pulse"
+        duration="400"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Trickle"
+        duration="200"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="Bomb"
+        duration="100"
+        pause="200"
+        random="0"
+        reverse="1" />-->
+        
+        
+   <record
+        name="Long beat"
+        duration="1000"
+        pause="1000"
+        random="0"
+        reverse="0" />
+    <record
+        name="Short beat"
+        duration="500"
+        pause="100"
+        random="0"
+        reverse="0" />
+    <record
+        name="Lightning"
+        duration="300"
+        pause="700"
+        random="0"
+        reverse="1" />
+    <record
+        name="Flicker"
+        duration="300"
+        pause="1000"
+        random="0"
+        reverse="0" />
+    <record
+        name="Oscillate"
+        duration="100"
+        pause="200"
+        random="0"
+        reverse="1" />
+    
+    <record
+        name="Twinkle"
+        duration="300"
+        pause="0"
+        random="0"
+        reverse="0" />
+    
+    <record
+        name="Sirens"
+        duration="300"
+        pause="0"
+        random="0"
+        reverse="1" />
+    
+    <record
+        name="Bomb"
+        duration="1500"
+        pause="500"
+        random="0"
+        reverse="0" />
+    <record
+        name="Pulse"
+        duration="400"
+        pause="0"
+        random="0"
+        reverse="0" />
+    
+    <record
+        name="Shimmering"
+        duration="1000"
+        pause="0"
+        random="0"
+        reverse="0" />
+    <record
+        name="3 Beat"
+        duration="400"
+        pause="600"
+        random="0"
+        reverse="0" />
+    
+      <record
+        name="Shine"
+        duration="1000"
+        pause="2000"
+        random="0"
+        reverse="0" />
+
+</data>

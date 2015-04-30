@@ -1,0 +1,268 @@
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:embraceplus="http://schemas.android.com/apk/res/com.embraceplus.app"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="40dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/TextTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="Timer"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="17dp"
+            android:src="@drawable/btn_options" />
+
+        <TextView
+            android:id="@+id/done_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text_title"
+            android:layout_alignBottom="@+id/text_title"
+            android:layout_alignLeft="@+id/button_right"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="7dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:text="Done"
+            android:textColor="#ffffff" 
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:background="#4cFFFFFF" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_style_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/start_textView_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/start_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="28dp"
+                android:layout_weight="1"
+                android:text="Start"
+                android:textColor="#ffffff"
+                android:textSize="18dip" />
+
+            <com.embraceplus.app.fragment.utils.MySwitch
+                android:id="@+id/toggle_Button" 
+                android:layout_width="80dip"
+                android:layout_height="20dip"
+                android:layout_alignBaseline="@+id/start_textView"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="19dp"
+                android:background="@drawable/switch_select"
+                embraceplus:checkedtext="On"
+                embraceplus:textSize="12px"
+                embraceplus:uncheckedtext="Off"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/start_textView_layout"
+            android:layout_marginTop="-2dp"
+            android:background="#4cffffff" />
+        
+        <!-- 
+        <com.embraceplus.widget.CountdownChronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/timer_countdown_margintop"
+            android:format="@string/chronometer_initial_format"
+            android:textSize="70dp"
+            android:visibility="invisible" /> -->
+
+	        
+        <FrameLayout
+            android:id="@+id/chronometerContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/timer_countdown_margintop">
+            
+            <!-- 
+	        <com.embraceplus.widget.CountdownChronometer
+	            android:id="@+id/chronometer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+	            android:textSize="70dp" /> -->
+
+		</FrameLayout> 	
+            
+        <LinearLayout
+            android:id="@+id/timerPickerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginTop="@dimen/alarm_datepicker_margintop"
+            android:gravity="center_horizontal">
+
+            <NumberPicker
+                android:id="@+id/show_num_picker_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/alarm_date_picker_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp" />
+            <!-- android:layout_marginTop="58dp" -->
+
+            <TextView
+                android:id="@+id/hour_seperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/timer_time_des_marginttop"
+                android:layout_toRightOf="@+id/show_num_picker_hour"
+                android:text="hours" />
+
+            <NumberPicker
+                android:id="@+id/show_num_picker_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/alarm_date_picker_height"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/hour_seperator" />
+
+            <TextView
+                android:id="@+id/minute_seperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/timer_time_des_marginttop"
+                android:layout_toRightOf="@+id/show_num_picker_minute"
+                android:text="min" />
+
+            <NumberPicker
+                android:id="@+id/show_num_picker_second"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/alarm_date_picker_height"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/minute_seperator" />
+
+            <TextView
+                android:id="@+id/second_seperator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/timer_time_des_marginttop"
+                android:layout_toRightOf="@+id/show_num_picker_second"
+                android:text="sec" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/two_view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/timerPickerLayout"
+            android:layout_marginTop="0dp"
+            android:background="#4cffffff" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/two_view"
+            android:layout_marginTop="10dp" >
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/viewpager"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="0dip">
+        </LinearLayout>
+
+        <View
+            android:id="@+id/three_view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_above="@+id/emulator"
+            android:layout_marginBottom="30dip"
+            android:layout_marginTop="5dp"
+            android:background="#4cffffff" />
+
+        <com.embraceplus.widget.EmulatorView
+            android:id="@+id/emulator"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-20dp"
+            android:background="@drawable/bracelet_view" />
+
+        
+        <TextView
+            android:id="@+id/select_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="12dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:paddingTop="40dp"
+            android:text="Preview"
+            android:textColor="#FFF"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+</LinearLayout>

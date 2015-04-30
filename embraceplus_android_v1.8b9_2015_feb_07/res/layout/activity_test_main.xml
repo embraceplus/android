@@ -1,0 +1,191 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/stastaticsAndDetailsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    
+     
+      <Button
+            android:id="@+id/btnOS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OS command" />
+      <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="connect To Server" />
+      
+      <Button
+            android:id="@+id/btnDisConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="disconnect The Server" />
+      <Button
+            android:id="@+id/btnShowDeviceList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="clear pre device" />
+      <TextView
+          android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status" />
+      
+        <TextView
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pause" />
+       <EditText  
+    android:id="@+id/pause"    
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"  
+    android:numeric="integer" 
+    />  
+    <TextView
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="loop" />
+       <EditText  
+    android:id="@+id/loop"    
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"  
+    android:numeric="integer" 
+    />  
+      
+      
+      <TextView
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fadeIn" />
+      
+      <EditText  
+    android:id="@+id/fadeIn"    
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"  
+     android:numeric="integer"
+    />  
+
+      <TextView
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hold" />
+       <EditText  
+    android:id="@+id/hold"    
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"
+    android:numeric="integer"   
+    />  
+      
+      <TextView
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fadeOut" />
+       <EditText  
+    android:id="@+id/fadeOut"    
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"  
+    android:numeric="integer" 
+    />  
+      
+      <TextView
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="c1" />
+       <EditText  
+    android:id="@+id/c1"    
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"  
+    android:numeric="integer" 
+    />  
+      
+      <TextView
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="c2" />
+       <EditText  
+    android:id="@+id/c2"    
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"  
+    android:numeric="integer" 
+    />  
+      
+      <TextView
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="c3" />
+       <EditText  
+    android:id="@+id/c3"    
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"  
+    android:numeric="integer" 
+    />  
+      
+      <TextView
+          
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="c4" />
+       <EditText  
+    android:id="@+id/c4"    
+    android:layout_width="fill_parent"   
+    android:layout_height="wrap_content"   
+    android:numeric="integer"
+    />  
+      
+    
+       
+       <CheckBox 
+     android:id="@+id/random"
+     android:layout_width="wrap_content" 
+     android:layout_height="wrap_content"
+     android:checked="false"
+     android:text="random"
+     ></CheckBox>
+       
+        
+        <CheckBox 
+     android:id="@+id/blankout"
+     android:layout_width="wrap_content" 
+     android:layout_height="wrap_content"
+     android:checked="false"
+     android:text="blankout"
+     ></CheckBox>
+        
+         
+         <CheckBox 
+     android:id="@+id/EffectSwitch"
+     android:layout_width="wrap_content" 
+     android:layout_height="wrap_content"
+     android:checked="false"
+     android:text="Effect Switch"
+     ></CheckBox>
+          
+       <CheckBox 
+     android:id="@+id/MotorSwitch"
+     android:layout_width="wrap_content" 
+     android:layout_height="wrap_content"
+     android:checked="false"
+     android:text="Motor Switch"
+     ></CheckBox>
+     
+         <Button
+            android:id="@+id/btnComitDefineCommand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="send define msg" />
+      
+      
+      
+</LinearLayout>
+</ScrollView>

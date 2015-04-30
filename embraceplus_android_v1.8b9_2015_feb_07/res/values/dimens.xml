@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="activity_vertical_margin">16.0dip</dimen>
+    <dimen name="icon_gridview_width">256.0dip</dimen>
+    <dimen name="icon_gridview_height">175.0dip</dimen>
+    <dimen name="icon_gridview_item_width">35.0dip</dimen>
+    <dimen name="icon_gridview_padding">22.0dip</dimen>
+    <dimen name="icon_gridview_spacing">10.0dip</dimen>
+    <dimen name="tab_textSize">12.0sp</dimen>
+    <dimen name="text_14">14.0sp</dimen>
+    <dimen name="text_16">16.0sp</dimen>
+    <dimen name="text_18">18.0sp</dimen>
+    <dimen name="text_20">20.0sp</dimen>
+    <dimen name="text_22">22.0sp</dimen>
+    
+    <dimen name="text_24">24.0sp</dimen>
+    <dimen name="popup_margin_left">5.0dip</dimen>
+    <dimen name="popup_margin_right">25.0dip</dimen>
+    <dimen name="popup_margin_top">5.0dip</dimen>
+    <dimen name="bubble_margin_top">-15.0dip</dimen>
+    <dimen name="info_margin_left">40.0dip</dimen>
+    <dimen name="info_margin_right">30.0dip</dimen>
+    
+    <dimen name="icon_grid_width">150dp</dimen>   
+    <dimen name="icon_grid_height">150dp</dimen>
+    
+    <dimen name="fx_item_icon_width">155dip</dimen>  
+    <dimen name="slide_button_width">90dip</dimen>
+    <dimen name="choose_style_pager_height">350dp</dimen>
+    <dimen name="choose_style_pager_height_marginbuttom">34dp</dimen>   
+    <dimen name="choose_style_pager_indicator_width">24px</dimen>
+    <dimen name="fx_pager_indicator_marginbutton">10dp</dimen>
+    
+    <dimen name="customer_fx_menu_button_fontsize">14dip</dimen>
+    <dimen name="customer_fx_menu_button_height">140dip</dimen>
+    <dimen name="customer_fx_menu_item_height">50dip</dimen>
+    <dimen name="customer_fx_menu_name_height">35dp</dimen>
+    <dimen name="customer_fx_menu_name_fontsize">16sp</dimen>
+    
+    <dimen name="customer_fx_type_button_width">60dp</dimen>
+    <dimen name="customer_fx_pager_paddingbuttom">0dp</dimen>
+    
+    <dimen name="customer_fx_pager_dot_width">10px</dimen>
+    <dimen name="customer_fx_pager_dot_height">16dp</dimen>
+    <dimen name="customer_fx_icon_selector_height">35dp</dimen>
+    
+    <dimen name="alarm_dot_width">24px</dimen>
+    <dimen name="alarm_viewpager_height">180dp</dimen>
+    
+    <dimen name="alarm_grid_item_width">110dp</dimen>
+    <dimen name="alarm_pagerview_padding">10dp</dimen>
+    <dimen name="alarm_date_picker_height">150dp</dimen>
+    
+    <dimen name="timer_time_des_marginttop">80dp</dimen>
+    <dimen name="fxpicselected_margin">2dip</dimen>
+    <dimen name="fx_viewpager_marginbottom">8dp</dimen>
+    <dimen name="grandpa_viewpager_height">140dp</dimen>
+    <dimen name="choose_style_pic_height">300dip</dimen>
+    
+    <dimen name="alarm_datapicker_width">300dip</dimen>
+    <dimen name="alarm_timerpicker_marginleft">-140dip</dimen>
+    
+    <dimen name="line_above_emulator_view">20dp</dimen>
+    
+    <dimen name="alarm_twoview_margintop">5dip</dimen>
+    <dimen name="alarm_datepicker_margintop">0dip</dimen>
+    <dimen name="timer_countdown_margintop">95dp</dimen>
+</resources>

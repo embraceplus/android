@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:embraceplus="http://schemas.android.com/apk/res/com.embraceplus.app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="40dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/TextTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="Alarm"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="17dp"
+            android:src="@drawable/btn_options" />
+        
+
+        <TextView
+            android:id="@+id/done_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text_title"
+            android:layout_alignBottom="@+id/text_title"
+            android:layout_alignLeft="@+id/button_right"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="7dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:text="Done"
+            android:textColor="#ffffff" 
+            android:visibility="gone"/>
+        
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:background="#4cFFFFFF" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_style_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/start_textView_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/start_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="28dp"
+                android:layout_weight="1"
+                android:text="Start"
+                android:textColor="#ffffff"
+                android:textSize="18dip" />
+            <!-- android:layout_marginTop="25dp" -->
+
+            <com.embraceplus.app.fragment.utils.MySwitch
+                android:id="@+id/toggle_Button"
+                android:layout_width="80dip"
+                android:layout_height="20dip"
+                android:layout_alignBaseline="@+id/start_textView"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="19dp"
+                android:background="@drawable/switch_select"
+                embraceplus:checkedtext="On"
+                embraceplus:textSize="12px"
+                embraceplus:uncheckedtext="Off" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/start_textView_layout"
+            android:layout_marginTop="10dp"
+            android:background="#4cffffff" />
+        <!--  -->
+
+        <LinearLayout
+            android:id="@+id/datePickerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="@dimen/alarm_datepicker_margintop"
+            android:gravity="center_horizontal" >
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="@dimen/alarm_datapicker_width"
+                android:layout_height="@dimen/alarm_date_picker_height"
+                android:layout_alignLeft="@+id/start_textView"
+                android:layout_below="@+id/view"
+                android:layout_marginLeft="-4dp"
+                android:layout_marginRight="10dp"
+                android:calendarViewShown="false"
+                android:descendantFocusability="blocksDescendants"
+                android:scaleX="0.5" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="@dimen/alarm_datapicker_width"
+                android:layout_height="@dimen/alarm_date_picker_height"
+                android:layout_marginLeft="@dimen/alarm_timerpicker_marginleft"
+                android:calendarViewShown="false"
+                android:descendantFocusability="blocksDescendants"
+                android:scaleX="0.5" />
+        </LinearLayout>
+        <!--  -->
+
+        <View
+            android:id="@+id/two_view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/datePickerLayout"
+            android:layout_marginTop="@dimen/alarm_twoview_margintop"
+            android:background="#4cffffff" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/two_view"
+            android:layout_marginTop="10dp" >
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/viewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/viewpager"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10dip" >
+        </LinearLayout>
+
+        <View
+            android:id="@+id/three_view"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_above="@+id/emulator"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="5dp"
+            android:background="#4cffffff" />
+
+        <com.embraceplus.widget.EmulatorView
+            android:id="@+id/emulator"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-20dp"
+            android:background="@drawable/bracelet_view" />
+
+        <TextView
+            android:id="@+id/select_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:text="Preview"
+            android:textColor="#FFF"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+</LinearLayout>

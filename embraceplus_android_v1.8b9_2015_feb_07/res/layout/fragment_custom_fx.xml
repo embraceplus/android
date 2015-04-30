@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:embraceplus="http://schemas.android.com/apk/res/com.embraceplus.app"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="17dp"
+            android:paddingRight="40dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:id="@+id/text_title"
+            style="@style/TextTitleBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="Fx editor"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="17dp"
+            android:src="@drawable/btn_options" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/done_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text_title"
+            android:layout_alignBottom="@+id/text_title"
+            android:layout_alignLeft="@+id/button_right"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="7dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:text="Done"
+            android:textColor="#ffffff"
+             />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="7dp"
+            android:background="#4cFFFFFF" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <com.embraceplus.widget.EmulatorView
+            android:id="@+id/emulator"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-20dp"
+            android:background="@drawable/bracelet_view" />
+
+<TextView
+            android:id="@+id/preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="12dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:paddingTop="40dp"
+            android:text="Preview"
+            android:textColor="#FFF"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/emulator"
+            android:orientation="vertical" >
+
+            <!-- android:layout_marginBottom="2dp" -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp" >
+
+
+                <ImageButton
+                    android:id="@+id/select_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="@dimen/customer_fx_icon_selector_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/fx_preset_button"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_action_picture" />
+                <!--
+                 android:layout_width="64dp"
+                android:layout_height="64dp"
+                -->
+
+                <EditText
+                    android:id="@+id/newMsgName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/customer_fx_menu_name_height"
+                    android:layout_toLeftOf="@id/select_icon"
+                    android:background="@drawable/bg_border"
+                    android:hint="Name"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="0dp"
+                    android:textSize="@dimen/customer_fx_menu_name_fontsize" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/customer_fx_menu_button_height"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/customer_fx_pager_paddingbuttom" >
+
+                <com.embraceplus.widget.PageSelectorView
+                    android:id="@+id/motion_presets"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <include layout="@layout/fx_motion_presets_page" />
+
+                    <include layout="@layout/fx_motion_presets_page" />
+                </com.embraceplus.widget.PageSelectorView>
+
+                <com.embraceplus.widget.PageSelectorPagerView
+                    android:id="@+id/motion_presets_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/customer_fx_pager_dot_height"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dip"
+                android:background="#4cffffff" />
+            <!-- android:background="#8FFF" -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/customer_fx_menu_button_height"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/customer_fx_pager_paddingbuttom" >
+
+                <com.embraceplus.widget.PageSelectorView
+                    android:id="@+id/colors"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <include layout="@layout/fx_colors_page" />
+
+                    <include layout="@layout/fx_colors_page" />
+                </com.embraceplus.widget.PageSelectorView>
+
+                <com.embraceplus.widget.PageSelectorPagerView
+                    android:id="@+id/colors_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/customer_fx_pager_dot_height"
+                    android:layout_alignParentBottom="true" />
+
+                <LinearLayout
+                    android:id="@+id/colors_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#A000"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shuffle color"
+                        android:textColor="#FFF"
+                        android:textSize="22sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dip"
+                android:background="#4cffffff" />
+            <!-- android:background="#8FFF" -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:paddingBottom="16dip" >
+
+                <ImageButton
+                    android:id="@+id/shuffle_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:background="@drawable/fx_preset_button"
+                    android:padding="4dp"
+                    android:src="@drawable/fx_shuffle_color" />
+
+                <ImageButton
+                    android:id="@+id/vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/fx_preset_button"
+                    android:padding="4dp"
+                    android:src="@drawable/fx_vibrate" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" >
+
+                    <Button
+                        android:id="@+id/select_left"
+                        android:layout_width="@dimen/customer_fx_type_button_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fx_preset_button"
+                        android:text="LEFT"
+                        android:textColor="#FFF" />
+
+                    <Button
+                        android:id="@+id/select_both"
+                        android:layout_width="@dimen/customer_fx_type_button_width"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:background="@drawable/fx_preset_button"
+                        android:text="BOTH"
+                        android:textColor="#FFF" />
+
+                    <Button
+                        android:id="@+id/select_right"
+                        android:layout_width="@dimen/customer_fx_type_button_width"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/fx_preset_button"
+                        android:text="RIGHT"
+                        android:textColor="#FFF" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

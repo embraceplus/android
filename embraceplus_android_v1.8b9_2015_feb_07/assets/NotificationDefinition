@@ -1,0 +1,23 @@
+[
+{"notificationName":"Incoming call","notificationPkg":"facebookxxxxx.xxxx.xxx","icon":"call_incoming"},
+{"notificationName":"Unknown call","notificationPkg":"facebookxxxxx.xxxx.xxx","icon":"call_unknown"},
+{"notificationName":"Text","notificationPkg":"facebookxxxxx.xxxx.xxx","icon":"sms_icon"},
+{"notificationName":"Battery phone","notificationPkg":"facebookxxxxx.xxxx.xxx","icon":"battery_icon"},
+{"notificationName":"Calendar","notificationPkg":"com.android.calendar","icon":"calendar_icon"},
+{"notificationName":"Alarm","notificationPkg":"facebookxxxxx.xxxx.xxx","icon":""},
+{"notificationName":"Timer","notificationPkg":"facebookxxxxx.xxxx.xxx","icon":""},
+{"notificationName":"Grandpa clock","notificationPkg":"facebookxxxxx.xxxx.xxx","icon":""},
+{"notificationName":"Facebook","notificationPkg":"com.facebook.orca","icon":"facebook"},
+{"notificationName":"Email","notificationPkg":"com.android.email","icon":"email"},
+{"notificationName":"Foursquare","notificationPkg":"com.joelapenna.foursquared","icon":"foursquare"},
+{"notificationName":"Instagram","notificationPkg":"com.instagram.android","icon":"instagram"},
+{"notificationName":"WhatsApp","notificationPkg":"com.whatsapp","icon":"whatsapp"},
+{"notificationName":"Tumblr","notificationPkg":"com.tumblr","icon":"tumblr"},
+{"notificationName":"Twitter","notificationPkg":"com.twitter.android","icon":"twitter"},
+{"notificationName":"Viber","notificationPkg":"com.viber.voip","icon":"viber"},
+{"notificationName":"Skype","notificationPkg":"com.skype.raider","icon":"skype"},
+{"notificationName":"Phone out of range","notificationPkg":"facebookxxxxx.xxxx.xxx","icon":"phone_out_of_range"},
+{"notificationName":"Pinterest","notificationPkg":"com.pinterest","icon":"pinterest"},
+{"notificationName":"Battery Embrace+","notificationPkg":"facebookxxxxx.xxxx.xxx","icon":"battery_low_embrace"},
+{"notificationName":"LinkedIn","notificationPkg":"com.linkedin.android","icon":"linkedin"}
+]
